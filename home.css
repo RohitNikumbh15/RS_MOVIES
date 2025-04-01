@@ -1,0 +1,566 @@
+/* Reset default margin, padding, and border */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+}
+
+/* --------------------------------------------------- */
+/* Search Container */
+.search-container {
+  position: relative;
+  width: 300px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-bar:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 8px rgba(255, 153, 0, 0.7);
+}
+
+/* Search Results */
+.movies {
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  background: #222;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+/* Individual Movie Result */
+.movie-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-bottom: 1px solid #444;
+}
+
+.movie-item:hover {
+  background: #444;
+}
+
+.movie-item img {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.movie-item .movie-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-item h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.movie-item p {
+  margin: 3px 0;
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* ------------------------------------------------------- */
+/* Logo Container */
+/* -------------------------------------------------------- */
+
+.play-button1 {
+  font-size: 28px;
+  color: red;
+  margin-right: 10px;
+}
+/* Navbar styling */
+.navbar {
+  background: linear-gradient(to bottom, #8b0000, black);
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Search bar styling */
+.search-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 300px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #660000;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-bar:focus {
+  background-color: #a30000;
+  transform: scale(1.05);
+}
+/* ----------------------------------------------------------- */
+/* Navigation links */
+.nav-links {
+  display: flex;
+  padding-top: 10px;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding-bottom: 5px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid white;
+}
+
+.nav-links a:hover {
+  color: #ff6666;
+  border-bottom: 2px solid #ff6666;
+}
+/* ------------------------------------------------------------- */
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 90%;
+  height: 70vh;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+}
+
+.slide-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide-item.active {
+  opacity: 1;
+}
+
+.slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide-item:hover img {
+  opacity: 0;
+}
+
+.slide-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.slide-item:hover .slide-video {
+  opacity: 1;
+}
+
+.slide-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.play-button {
+  background: transparent;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color:transparent;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+/* ------------------------------------------------- */
+/* Streaming Section */
+.apps {
+  padding: 50px 0;
+  text-align: center;
+  background: linear-gradient(to right, #111, #222);
+}
+
+.apps h2 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.streaming-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.streaming-item {
+  position: relative;
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.streaming-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.streaming-item video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.streaming-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px rgba(255, 0, 0, 0.7);
+}
+
+.streaming-item:hover img {
+  opacity: 0;
+}
+
+.streaming-item:hover video {
+  opacity: 1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .streaming-box {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .streaming-item {
+      width: 80%;
+      height: auto;
+  }
+}
+
+
+/* --------------------------------------------------- */
+.movies{
+  width: auto;
+  height: auto;
+}
+/* -------------------------------------------------------- */
+
+.title {
+  color: #fff;
+  opacity: 0.9;
+  padding-left: 4%;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.movies-list {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  margin: 10px 0 20px;
+}
+
+.card-container {
+  position: relative;
+  width: 92%;
+  padding-left: 10px;
+  height: 220px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  position: relative;
+  min-width: 150px;
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 10px;
+  transition: 0.4s ease-in-out;
+}
+
+/* Hover Effect: Scale & Glow */
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.8); /* Red Glow */
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Dynamic glow on image */
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease-in-out;
+}
+
+.card:hover .card-img {
+  box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.8); /* Cyan Glow */
+}
+
+/* Show movie details on hover */
+.card:hover .card-body {
+  opacity: 1;
+}
+
+.card-body {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 60%;
+}
+
+.des {
+  color: #fff;
+  opacity: 0.8;
+  margin: 5px 0;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* Watchlist Button */
+.watchlist-btn {
+  position: relative;
+  width: 100%;
+  text-transform: capitalize;
+  background: none;
+  border: none;
+  font-weight: 500;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 5px 0;
+  cursor: pointer;
+  padding: 10px 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.watchlist-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -5px;
+  height: 35px;
+  width: 35px;
+  background-image: url("images/add.png"); /* Fixed Path */
+  background-size: cover;
+  transform: scale(0.4);
+}
+
+/* Hover Effect for Watchlist Button */
+.watchlist-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Navigation Buttons */
+.pre-btn,
+.nxt-btn {
+  position: absolute;
+  top: 0;
+  width: 5%;
+  height: 100%;
+  z-index: 2;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+}
+
+.pre-btn {
+  left: 0;
+  background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+}
+
+.nxt-btn {
+  right: 0;
+  background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+}
+
+/* Navigation Button Images */
+.pre-btn img,
+.nxt-btn img {
+  width: 15px;
+  height: 20px;
+  opacity: 0;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+/* Animation for smooth hover effects */
+@keyframes glow {
+  0% {
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5);
+  }
+}
+
+/* --------------------------------------------------------- */
+.navbar2 {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000;
+  padding: 10px 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar2 a {
+  color: #666;
+  text-decoration: none;
+  text-align: center;
+  flex: 1;
+  padding: 10px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar2 a i {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.navbar2 a span {
+  font-size: 12px;
+}
+
+.navbar2 a.active,
+.navbar2 a:hover {
+  color: #fff;
+}

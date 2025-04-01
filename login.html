@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Movies - Login & Sign Up</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #141414;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            background: rgba(34, 34, 34, 0.95);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+            width: 400px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        button {
+            background: linear-gradient(45deg, red, darkred);
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, darkred, red);
+        }
+
+        .toggle-link {
+            color: #ff4c4c;
+            cursor: pointer;
+            margin-top: 15px;
+            display: block;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .toggle-link:hover {
+            color: #ff1a1a;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="login-container">
+        <h2>Login to RS Movies</h2>
+        <form id="loginForm" action="Register" method="POST">
+            <input type="text" id="login-username" name="username" placeholder="Enter your username" required>
+            <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+            <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+            <button type="submit">Login</button>
+        </form>
+        <span class="toggle-link" onclick="toggleForms()">Don't have an account? Sign Up</span>
+    </div>
+
+    <div class="container hidden" id="signup-container">
+        <h2>Sign Up for RS Movies</h2>
+        <form id="signupForm" action="Login" method="POST">
+            <input type="text" id="signup-username" name="username" placeholder="Enter your username" required>
+            <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+            <input type="password" id="signup-password" name="password" placeholder="Enter your password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <span class="toggle-link" onclick="toggleForms()">Already have an account? Login</span>
+    </div>
+
+    <script>
+        function toggleForms() {
+            document.getElementById("login-container").classList.toggle("hidden");
+            document.getElementById("signup-container").classList.toggle("hidden");
+        }
+
+       
+    </script>
+</body>
+</html>

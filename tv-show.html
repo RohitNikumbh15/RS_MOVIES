@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="home.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+ 
+  <div class="navbar">
+  <header>
+    <div class="logo">RS Movies</div>
+</header>
+   <div class="search-container">
+    <input type="text" class="search-bar" id="searchInput" placeholder="Search movie">
+    <div class="movies" id="searchResults"></div>
+</div>
+
+
+  </div>
+
+  <div class="nav-links">
+    <a href="home.html">Recommend</a>
+    <a href="movies.html">Movies</a>
+    <a href="tv-show.html">TV Shows</a>
+    <a href="anime.html">Anime</a>
+    <a href="sports.html">Sports</a>
+  </div>
+
+      <section class="slide">
+        <div class="slideshow-container">
+          <div class="slide-item active">
+            <img class="slide-img" src="image/tvshow/cid.jpg" alt="Image 1">
+            <video class="slide-video" src="video/movie5.mp4" muted loop></video>
+            <div class="slide-info">
+              <h2>CID</h2>
+              <p>A thrilling detective series solving mysterious crimes.</p>
+              <button class="play-button" onclick="playVideo(0)">▶ Play</button>
+            </div>
+          </div>
+          <div class="slide-item">
+            <img class="slide-img" src="image/tvshow/Ratris-Khel-Chale-2-Serial.jpg" alt="Image 2">
+            <video class="slide-video" src="video/movie4.mp4" muted loop></video>
+            <div class="slide-info">
+              <h2>Ratris Khel Chale</h2>
+              <p>A supernatural horror show with eerie twists.</p>
+              <button class="play-button" onclick="playVideo(1)">▶ Play</button>
+            </div>
+          </div>
+          <div class="slide-item">
+            <img class="slide-img" src="image/tvshow/tmkoc.jpeg" alt="Image 3">
+            <video class="slide-video" src="video/tmkoc.mp4" muted loop></video>
+            <div class="slide-info">
+              <h2>Taarak Mehta Ka Ooltah Chashmah</h2>
+              <p>A lighthearted comedy that brings joy to every household.</p>
+              <button class="play-button" onclick="playVideo(2)">▶ Play</button>
+            </div>
+          </div>
+          
+          <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </section>
+    
+<section>
+        <h1 class="title">Recommended For You</h1>
+        <div class="movies-list">
+          <button class="pre-btn" title="btn">
+            <img src="images/pre.png" alt="" />
+          </button>
+          <button class="nxt-btn" title="btn">
+            <img src="images/nxt.png" alt="" />
+          </button>
+          <div class="card-container">
+            <div class="card">
+              <img src="image/tvshow/tv4.jpeg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Movie Name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/tvshow/tv11.jpeg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Movie Name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/tvshow/tv12.jpeg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Movie Name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/tvshow/tv16.jpeg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Movie Name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/tvshow/tv13.jpeg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Movie Name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/tvshow/tv10.jpeg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Movie Name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/tvshow/tv9.jpeg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Movie Name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/tvshow/tv1.jpeg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Movie Name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/tvshow/tv4.jpeg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Movie Name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/tvshow/tv3.jpeg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Movie Name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/tvshow/tv2.jpeg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Movie Name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="image/tvshow/tv5.jpeg" class="card-img" alt="" />
+              <div class="card-body">
+                <h2 class="name">Movie Name</h2>
+                <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+                <button class="watchlist-btn">add to watchlist</button>
+              </div>
+            </div>
+          </div>
+</section>
+
+<section>
+  <h1 class="title">Top shows</h1>
+  <div class="movies-list">
+    <button class="pre-btn" title="btn">
+      <img src="images/pre.png" alt="" />
+    </button>
+    <button class="nxt-btn" title="btn">
+      <img src="images/nxt.png" alt="" />
+    </button>
+    <div class="card-container">
+      <div class="card">
+        <img src="image/tvshow/tv1.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv2.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv3.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv4.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv5.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv15.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv7.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv8.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv9.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv10.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv11.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv12.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+    </div>
+</section>
+<section>
+  <h1 class="title">Popular</h1>
+  <div class="movies-list">
+    <button class="pre-btn" title="btn">
+      <img src="images/pre.png" alt="" />
+    </button>
+    <button class="nxt-btn" title="btn">
+      <img src="images/nxt.png" alt="" />
+    </button>
+    <div class="card-container">
+      <div class="card">
+        <img src="image/tvshow/tv4.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv11.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv2.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv16.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv3.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv10.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv1.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv12.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv5.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv15.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv6.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv8.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+    </div>
+</section>
+<section>
+  <h1 class="title">Most like</h1>
+  <div class="movies-list">
+    <button class="pre-btn" title="btn">
+      <img src="images/pre.png" alt="" />
+    </button>
+    <button class="nxt-btn" title="btn">
+      <img src="images/nxt.png" alt="" />
+    </button>
+    <div class="card-container">
+      <div class="card">
+        <img src="image/tvshow/tv4.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv11.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv12.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv16.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv13.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv10.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv9.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv1.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv4.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv3.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv2.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/tvshow/tv5.jpeg" class="card-img" alt="" />
+        <div class="card-body">
+          <h2 class="name">Movie Name</h2>
+          <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+          <button class="watchlist-btn">add to watchlist</button>
+        </div>
+      </div>
+    </div>
+</section>
+        <section>
+            <div class="navbar2">
+                <a href="home.html" class="active">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span>Home</span>
+                </a>
+                <a href="Ranking.html">
+                    <i class="bi bi-bar-chart-line"></i>
+                    <span>Ranking</span>
+                </a>
+                <a href="Explore.html">
+                    <i class="bi bi-grid"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="Promotion.html">
+                    <i class="bi bi-gift"></i>
+                    <span>Promotion</span>
+                </a>
+                <a href="profile.html">
+                    <i class="bi bi-person"></i>
+                    <span>Me</span>
+                </a>
+            </div>
+
+        </section>
+        <script src="home.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
